@@ -1,0 +1,15 @@
+# ninja log v7
+26	1007	8103082793921805	CMakeFiles/simulation-platform.dir/src/simulation-platform.cpp.obj	111c919e0757ab3b
+1009	1089	8103082803750417	simulation-platform.exe	2af1fe449a242d1b
+23	1495	8103082793891809	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	f7835f2569e7d087
+34	1531	8103082794001936	tests/CMakeFiles/test_example.dir/test_example.cpp.obj	6bcaae01c704762
+30	1644	8103082793951803	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	e649466b1aabf43f
+19	1995	8103082793846244	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	8da514488845c9e2
+14	3693	8103082793806238	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	a3b7b74816700ada
+3694	3753	8103082830591825	lib/gtest.lib	e9a35f0bdecf6a32
+3753	3802	8103082831195905	lib/gmock.lib	85ea36faab351d03
+3759	3807	8103082831245884	lib/gtest_main.lib	7b30f9d569b372ad
+3802	3846	8103082831680207	lib/gmock_main.lib	b8992cb9a1d6b4fc
+3807	3988	8103082833480995	tests/test_example.exe	451d9a6a08ea4b9b
+3807	3988	8103082833480995	tests/test_example_e3b0c442_tests.cmake	451d9a6a08ea4b9b
+3807	3988	8103082833480995	C:/Users/Joel/Documents/Visual Studio 2022/Projects/simulation-platform/build-ninja/tests/test_example_e3b0c442_tests.cmake	451d9a6a08ea4b9b

@@ -1,0 +1,39 @@
+name: C++ CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang clang-tidy clang-format ninja-build
+
+      - name: Configure CMake
+        run: cmake -S . -B build -G Ninja
+
+      - name: Build
+        run: cmake --build build
+
+      - name: Run tests
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Check formatting
+        run: |
+          clang-format --dry-run --Werror \
+            src/simulation-platform.cpp \
+            tests/test_example.cpp
+
+      - name: Run clang-tidy
+        run: |
+          clang-tidy \
+            -p build \
+            src/simulation-platform.cpp
