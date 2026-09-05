@@ -27,11 +27,9 @@ jobs:
         run: ctest --test-dir build --output-on-failure
 
       - name: Check formatting
-        run: |
-          clang-format --dry-run --Werror \
-            src/simulation-platform.cpp \
-            src/Particle.cc \
-            tests/particle_test.cc
+          run: |
+            find src tests include -type f \( -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.hpp' \) \
+              -print0 | xargs -0 clang-format --dry-run --Werror
 
       - name: Run clang-tidy
         run: |
