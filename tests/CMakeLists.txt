@@ -1,14 +1,16 @@
-add_executable(
-    test_example
-    test_example.cpp
+file(GLOB TEST_SOURCES CONFIGURE_DEPENDS
+    "*.cc"
 )
 
-target_link_libraries(
-    test_example
+add_executable(simulation_tests
+    ${TEST_SOURCES}
+)
+
+target_link_libraries(simulation_tests
     PRIVATE
-    GTest::gtest_main
+        simulation
+        GTest::gtest_main
 )
 
 include(GoogleTest)
-
-gtest_discover_tests(test_example)
+gtest_discover_tests(simulation_tests)

@@ -1,0 +1,14 @@
+Particle
+--------
+A particle represents a point mass in 3D space.
+
+Properties:
+- mass
+- position
+- velocity
+
+Requirements:
+- mass must be positive
+- position defaults to the origin
+- velocity defaults to zero
+- particle state can be queried

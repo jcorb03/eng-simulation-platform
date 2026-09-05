@@ -3,6 +3,32 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# CMake build directories
+build/
+build-ninja/
+cmake-build-*/
+
+# Visual Studio
+.vs/
+
+# Compiled binaries
+*.exe
+*.dll
+*.lib
+*.obj
+*.pdb
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# IDE files
+*.suo
+*.user
+
 # User-specific files
 *.rsuser
 *.suo

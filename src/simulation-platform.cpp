@@ -1,7 +1,7 @@
 ﻿// simulation-platform.cpp : Defines the entry point for the application.
 //
 
-#include "simulation-platform.h"
+#include "../include/simulation/simulation-platform.h"
 
 int main()
 {
