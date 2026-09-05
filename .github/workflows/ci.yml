@@ -27,9 +27,9 @@ jobs:
         run: ctest --test-dir build --output-on-failure
 
       - name: Check formatting
-          run: |
-            find src tests include -type f \( -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.hpp' \) \
-              -print0 | xargs -0 clang-format --dry-run --Werror
+        run: |
+          find src tests include -type f \( -name '*.cpp' -o -name '*.cc' -o -name '*.h' -o -name '*.hpp' \) \
+            -print0 | xargs -0 clang-format --dry-run --Werror
 
       - name: Run clang-tidy
         run: |
