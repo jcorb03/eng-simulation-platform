@@ -43,11 +43,11 @@ std::vector<double> Particle::getVelocity() const
 void Particle::setMass(double mass)
 {
     mass_ = mass;
-    if (mass_ < 0) {
-        
+    if (mass_ < 0)
+    {
+
         throw std::invalid_argument("Mass cannot be negative.");
     }
-    
 }
 
 void Particle::setPosition(std::vector<double> position)
@@ -57,7 +57,6 @@ void Particle::setPosition(std::vector<double> position)
     {
         throw std::invalid_argument("Position must be a 3D vector.");
     }
-    
 }
 
 void Particle::setVelocity(std::vector<double> velocity)
