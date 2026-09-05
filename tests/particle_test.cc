@@ -19,6 +19,10 @@ TEST(ParticleTest, Construction)
   EXPECT_EQ(p.getMass(), 1.0);
   EXPECT_EQ(p.getPosition(), std::vector<double>({1.0, 2.0, 3.0}));
   EXPECT_EQ(p.getVelocity(), std::vector<double>({4.0, 5.0, 6.0}));
+
+  EXPECT_THROW(Particle p(-1.0, {1.0, 2.0, 3.0}, {4.0, 5.0, 6.0}), std::invalid_argument);
+  EXPECT_THROW(Particle p(0.0, {1.0, 2.0}, {4.0, 5.0, 6.0}), std::invalid_argument);
+  EXPECT_THROW(Particle p(1.0, {1.0, 2.0, 3.0}, {4.0, 5.0}), std::invalid_argument);
 }
 
 TEST(ParticleTest, SetMass)
@@ -27,7 +31,7 @@ TEST(ParticleTest, SetMass)
   EXPECT_NO_THROW(p.setMass(2.0););
   EXPECT_EQ(p.getMass(), 2.0);
 
-  EXPECT_ANY_THROW(p.setMass(-1.0));
+  EXPECT_THROW(p.setMass(-1.0), std::invalid_argument);
 }
 
 TEST(ParticleTest, SetPosition)
@@ -35,7 +39,7 @@ TEST(ParticleTest, SetPosition)
   Particle p;
   EXPECT_NO_THROW(p.setPosition({1.0, 2.0, 3.0}));
   EXPECT_EQ(p.getPosition(), std::vector<double>({1.0, 2.0, 3.0}));
-  EXPECT_ANY_THROW(p.setPosition({1.0, 2.0})); // Not a 3D vector
+  EXPECT_THROW(p.setPosition({1.0, 2.0}), std::invalid_argument); // Not a 3D vector
 }
 
 TEST(ParticleTest, SetVelocity)
@@ -43,6 +47,6 @@ TEST(ParticleTest, SetVelocity)
   Particle p;
   EXPECT_NO_THROW(p.setVelocity({1.0, 2.0, 3.0}));
   EXPECT_EQ(p.getVelocity(), std::vector<double>({1.0, 2.0, 3.0}));
-  EXPECT_ANY_THROW(p.setVelocity({1.0, 2.0})); // Not a 3D vector
+  EXPECT_THROW(p.setVelocity({1.0, 2.0}), std::invalid_argument); // Not a 3D vector
 }
 } // namespace simulation_tests

@@ -13,6 +13,10 @@ Particle::Particle(double mass, std::vector<double> position, std::vector<double
   {
     throw std::invalid_argument("Mass cannot be negative.");
   }
+  if (mass_ == 0)
+  {
+    throw std::invalid_argument("Mass cannot be zero.");
+  }
 
   if (position_.size() != 3)
   {
@@ -43,27 +47,36 @@ std::vector<double> Particle::getVelocity() const
 void Particle::setMass(double mass)
 {
   mass_ = mass;
-  if (mass_ < 0)
+  if (mass < 0)
   {
 
     throw std::invalid_argument("Mass cannot be negative.");
   }
+
+  if (mass == 0)
+  {
+    throw std::invalid_argument("Mass cannot be zero.");
+  }
+
+  mass_ = mass;
 }
 
 void Particle::setPosition(std::vector<double> position)
 {
-  position_ = position;
-  if (position_.size() != 3)
+  
+  if (position.size() != 3)
   {
     throw std::invalid_argument("Position must be a 3D vector.");
   }
+  position_ = position;
 }
 
 void Particle::setVelocity(std::vector<double> velocity)
 {
-  velocity_ = velocity;
-  if (velocity_.size() != 3)
+  
+  if (velocity.size() != 3)
   {
     throw std::invalid_argument("Velocity must be a 3D vector.");
   }
+  velocity_ = velocity;
 }
