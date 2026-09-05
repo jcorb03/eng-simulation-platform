@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\586006a2a21febea0131abab75475643\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\f7ad07826eebebe895faf7cc61c2aa36\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\8f7e27a7e9145b90bb569fa0abe08f39\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Joel\Documents\Visual Studio 2022\Projects\simulation-platform\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{66A31E59-3D89-3DB2-A170-535BB29BC040}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
