@@ -1,5 +1,0 @@
-if(EXISTS "C:/Users/Joel/Documents/Visual Studio 2022/Projects/simulation-platform/build/tests/test_example_e3b0c442_Debug_tests.cmake")
-  include("C:/Users/Joel/Documents/Visual Studio 2022/Projects/simulation-platform/build/tests/test_example_e3b0c442_Debug_tests.cmake")
-else()
-  add_test(test_example_NOT_BUILT test_example_NOT_BUILT)
-endif()

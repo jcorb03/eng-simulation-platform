@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/Joel/Documents/Visual Studio 2022/Projects/simulation-platform/build-ninja/_deps/googletest-subbuild/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
