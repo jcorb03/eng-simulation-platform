@@ -30,7 +30,8 @@ jobs:
         run: |
           clang-format --dry-run --Werror \
             src/simulation-platform.cpp \
-            tests/test_example.cpp
+            src/Particle.cc \
+            tests/particle_test.cc
 
       - name: Run clang-tidy
         run: |
