@@ -44,11 +44,9 @@ TEST(Vector_Test, DotProduct)
 {
   Vector3 v1(1.0, 2.0, 3.0);
   Vector3 v2(2.0, 4.0, 6.0);
-  Vector3 v3 = v1.dot(v2);
+  EXPECT_NEAR(v1.dot(v2), 28.0, 1e-10);
 
-  EXPECT_EQ(v3.x(), 2.0);
-  EXPECT_EQ(v3.y(), 8.0);
-  EXPECT_EQ(v3.z(), 18.0);
+  
 }
 TEST(Vector_Test, ScalarMultiplication)
 {

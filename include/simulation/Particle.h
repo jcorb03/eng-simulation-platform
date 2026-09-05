@@ -1,24 +1,24 @@
 #pragma once
 
-#include <vector>
 #include <iostream>
+#include "simulation/Vector3.h"
 
 class Particle
 {
   public:
     Particle();
-    Particle(double mass, std::vector<double> position, std::vector<double> velocity);
+    Particle(double mass, Vector3 position, Vector3 velocity);
     
     double getMass() const;
-    std::vector<double> getPosition() const;
-    std::vector<double> getVelocity() const;
+    Vector3 getPosition() const;
+    Vector3 getVelocity() const;
 
     void setMass(double mass);
-    void setPosition(std::vector<double> position);
-    void setVelocity(std::vector<double> velocity);
+    void setPosition(Vector3 position);
+    void setVelocity(Vector3 velocity);
 
   private:
     double mass_;
-    std::vector<double> position_;
-    std::vector<double> velocity_;
+    Vector3 position_;
+    Vector3 velocity_;
 };

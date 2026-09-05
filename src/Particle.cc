@@ -6,7 +6,7 @@ Particle::Particle()
   position_ = {0.0, 0.0, 0.0};
   velocity_ = {0.0, 0.0, 0.0};
 }
-Particle::Particle(double mass, std::vector<double> position, std::vector<double> velocity)
+Particle::Particle(double mass, Vector3 position, Vector3 velocity)
     : mass_(mass), position_(position), velocity_(velocity)
 {
   if (mass_ < 0)
@@ -18,15 +18,7 @@ Particle::Particle(double mass, std::vector<double> position, std::vector<double
     throw std::invalid_argument("Mass cannot be zero.");
   }
 
-  if (position_.size() != 3)
-  {
-    throw std::invalid_argument("Position must be a 3D vector.");
-  }
-
-  if (velocity_.size() != 3)
-  {
-    throw std::invalid_argument("Velocity must be a 3D vector.");
-  }
+  
 }
 
 double Particle::getMass() const
@@ -34,12 +26,12 @@ double Particle::getMass() const
   return mass_;
 }
 
-std::vector<double> Particle::getPosition() const
+Vector3 Particle::getPosition() const
 {
   return position_;
 }
 
-std::vector<double> Particle::getVelocity() const
+Vector3 Particle::getVelocity() const
 {
   return velocity_;
 }
@@ -61,22 +53,16 @@ void Particle::setMass(double mass)
   mass_ = mass;
 }
 
-void Particle::setPosition(std::vector<double> position)
+void Particle::setPosition(Vector3 position)
 {
   
-  if (position.size() != 3)
-  {
-    throw std::invalid_argument("Position must be a 3D vector.");
-  }
+  
   position_ = position;
 }
 
-void Particle::setVelocity(std::vector<double> velocity)
+void Particle::setVelocity(Vector3 velocity)
 {
   
-  if (velocity.size() != 3)
-  {
-    throw std::invalid_argument("Velocity must be a 3D vector.");
-  }
+  
   velocity_ = velocity;
 }

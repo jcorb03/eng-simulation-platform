@@ -10,11 +10,10 @@ public:
   double y() const;
   double z() const;
 
-  Vector3 dot(const Vector3& other) const;
+  double dot(const Vector3& other) const;
   Vector3 operator+(const Vector3& other) const;
   Vector3 operator-(const Vector3& other) const;
   Vector3 operator*(double scalar) const;
-  
 
   double magnitude() const;
 

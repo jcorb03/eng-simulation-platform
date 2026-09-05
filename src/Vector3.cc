@@ -20,9 +20,9 @@ double Vector3::z() const
   return z_;
 }
 
-Vector3 Vector3::dot(const Vector3& other) const 
+double Vector3::dot(const Vector3& other) const 
 {
-  return Vector3(x_ * other.x(), y_ * other.y(), z_ * other.z());
+  return x_ * other.x() + y_ * other.y() + z_ * other.z();
 }
 
 Vector3 Vector3::operator+(const Vector3& other) const
