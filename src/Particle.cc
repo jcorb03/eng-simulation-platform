@@ -2,7 +2,7 @@
 
 Particle::Particle()
 {
-  mass_ = 0;
+  mass_ = 1;
   position_ = {0.0, 0.0, 0.0};
   velocity_ = {0.0, 0.0, 0.0};
 }
@@ -38,7 +38,7 @@ Vector3 Particle::getVelocity() const
 
 void Particle::setMass(double mass)
 {
-  mass_ = mass;
+  
   if (mass < 0)
   {
 
@@ -53,14 +53,14 @@ void Particle::setMass(double mass)
   mass_ = mass;
 }
 
-void Particle::setPosition(Vector3 position)
+void Particle::setPosition(const Vector3& position)
 {
   
   
   position_ = position;
 }
 
-void Particle::setVelocity(Vector3 velocity)
+void Particle::setVelocity(const Vector3& velocity)
 {
   
   

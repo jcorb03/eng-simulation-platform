@@ -14,8 +14,8 @@ class Particle
     Vector3 getVelocity() const;
 
     void setMass(double mass);
-    void setPosition(Vector3 position);
-    void setVelocity(Vector3 velocity);
+    void setPosition(const Vector3& position);
+    void setVelocity(const Vector3& velocity);
 
   private:
     double mass_;
