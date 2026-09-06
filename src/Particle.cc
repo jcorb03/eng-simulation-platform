@@ -3,10 +3,12 @@
 Particle::Particle()
 {
   mass_ = 1;
-  position_ = {0.0, 0.0, 0.0};
-  velocity_ = {0.0, 0.0, 0.0};
+  position_ = Vector3(0.0, 0.0, 0.0);
+  velocity_ = Vector3(0.0, 0.0, 0.0);
+  acceleration_ = Vector3(0.0, 0.0, 0.0);
 }
-Particle::Particle(double mass, Vector3 position, Vector3 velocity, Vector3 acceleration)
+
+  Particle::Particle(double mass, Vector3 position, Vector3 velocity, Vector3 acceleration)
     : mass_(mass), position_(position), velocity_(velocity), acceleration_(acceleration)
 {
   if (mass_ < 0)

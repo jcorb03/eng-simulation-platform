@@ -8,10 +8,12 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Core simulation library
+
+
 add_library(simulation
     src/Particle.cc
     src/Vector3.cc
+    src/ForceCalculator.cc
     src/ParticleSimulation.cc
 )
 

@@ -20,13 +20,13 @@ std::vector<Vector3> ForceCalculator::calculateForces(const std::vector<Particle
     Vector3 force(0.0, 0.0, 0.0);
     if (gravity_enabled)
     {
-      force += Vector3(0.0, 0.0, -9.81 * particle.getMass());
+      force = force + Vector3(0.0, 0.0, -9.81 * particle.getMass());
     }
     if (drag_enabled)
     {
       Vector3 v = particle.getVelocity();
       Vector3 drag = -10.0 * v;
-      force += drag;
+      force = force + drag;
     }
     forces.push_back(force);
   }
