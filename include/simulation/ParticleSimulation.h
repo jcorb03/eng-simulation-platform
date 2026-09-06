@@ -1,13 +1,8 @@
 #pragma once
 #include "simulation/Particle.h"
+#include "simulation/ForceType.h"
 #include <vector>
 #include <algorithm>
-
-enum class Forces
-{
-  GRAVITY,
-  DRAG
-};
 
 class ParticleSimulation
 {
