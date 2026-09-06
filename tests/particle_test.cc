@@ -1,5 +1,6 @@
 #include "simulation/Particle.h"
 #include <gtest/gtest.h>
+
 namespace simulation_tests
 {
 
@@ -15,15 +16,16 @@ TEST(ParticleTest, DefaultConstruction)
 
 TEST(ParticleTest, Construction)
 {
-  EXPECT_NO_THROW({ Particle p(1.0, {1.0, 2.0, 3.0}, {4.0, 5.0, 6.0}); });
-  Particle p(1.0, {1.0, 2.0, 3.0}, {4.0, 5.0, 6.0});
+  Vector3 v(1.0, 2.0, 3.0);
+  EXPECT_NO_THROW({ Particle p(1.0, v, v,v); });
+  Particle p(1.0, v, v,v);
   EXPECT_EQ(p.getMass(), 1.0);
   EXPECT_EQ(p.getPosition().x(), 1.0);
   EXPECT_EQ(p.getPosition().y(), 2.0);
   EXPECT_EQ(p.getPosition().z(), 3.0);
-  EXPECT_EQ(p.getVelocity().x(), 4.0);
-  EXPECT_EQ(p.getVelocity().y(), 5.0);
-  EXPECT_EQ(p.getVelocity().z(), 6.0);
+  EXPECT_EQ(p.getVelocity().x(), 1.0);
+  EXPECT_EQ(p.getVelocity().y(), 2.0);
+  EXPECT_EQ(p.getVelocity().z(), 3.0);
 }
 
 TEST(ParticleTest, SetMass)

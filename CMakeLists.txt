@@ -12,6 +12,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_library(simulation
     src/Particle.cc
     src/Vector3.cc
+    src/ParticleSimulation.cc
 )
 
 target_include_directories(simulation

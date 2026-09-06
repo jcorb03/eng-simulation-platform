@@ -6,8 +6,8 @@ Particle::Particle()
   position_ = {0.0, 0.0, 0.0};
   velocity_ = {0.0, 0.0, 0.0};
 }
-Particle::Particle(double mass, Vector3 position, Vector3 velocity)
-    : mass_(mass), position_(position), velocity_(velocity)
+Particle::Particle(double mass, Vector3 position, Vector3 velocity, Vector3 acceleration)
+    : mass_(mass), position_(position), velocity_(velocity), acceleration_(acceleration)
 {
   if (mass_ < 0)
   {
@@ -36,6 +36,11 @@ Vector3 Particle::getVelocity() const
   return velocity_;
 }
 
+Vector3 Particle::getAcceleration() const
+{
+  return acceleration_;
+}
+
 void Particle::setMass(double mass)
 {
   
@@ -62,7 +67,10 @@ void Particle::setPosition(const Vector3& position)
 
 void Particle::setVelocity(const Vector3& velocity)
 {
-  
-  
   velocity_ = velocity;
+}
+
+void Particle::setAcceleration(const Vector3& acceleration)
+{
+  acceleration_ = acceleration;
 }
