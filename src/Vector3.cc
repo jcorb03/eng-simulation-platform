@@ -44,6 +44,10 @@ Vector3 operator*(const double scalar, const Vector3& v)
 {
   return Vector3(v.x() * scalar, v.y() * scalar, v.z() * scalar);
 }
+Vector3 Vector3::operator/(double scalar) const
+{
+  return Vector3(x_ / scalar, y_ / scalar, z_ / scalar);
+}
 
 double Vector3::magnitude() const
 {

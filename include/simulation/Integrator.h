@@ -12,11 +12,14 @@ enum class IntegrationMethod
 class Integrator
 {
 public:
-  Integrator(double timestep, IntegrationMethod intMethod);
+  Integrator(IntegrationMethod intMethod);
 
-  void advance(std::vector<Particle>& particles, const std::vector<Vector3>& forces);
+  void advance(std::vector<Particle>& particles, const std::vector<Vector3>& forces,
+                           double timestep);
 
 private:
+  void doEulerStep(std::vector<Particle>& particles, const std::vector<Vector3>& forces,
+                   double timestep);
   IntegrationMethod integration_method_;
 
 };

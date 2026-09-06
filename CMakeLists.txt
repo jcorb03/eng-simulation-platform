@@ -15,6 +15,7 @@ add_library(simulation
     src/Vector3.cc
     src/ForceCalculator.cc
     src/ParticleSimulation.cc
+    src/Integrator.cc
 )
 
 target_include_directories(simulation
