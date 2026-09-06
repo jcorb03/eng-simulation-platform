@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <algorithm>
 #include "simulation/Vector3.h"
 #include "simulation/Particle.h"
 #include "simulation/ForceType.h"

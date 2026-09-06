@@ -1,6 +1,8 @@
 #pragma once
 #include "simulation/Particle.h"
 #include "simulation/ForceType.h"
+#include "simulation/ForceCalculator.h"
+#include "simulation/Integrator.h"
 #include <vector>
 #include <algorithm>
 
@@ -22,5 +24,6 @@ private:
   double timestep_ = 0.01;
   double sim_length_ = 10.0;
   std::vector<Forces> enabled_forces_ = {};
+  std::vector<std::vector<Vector3>> position_history_;
 };
 

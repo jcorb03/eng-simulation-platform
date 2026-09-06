@@ -3,6 +3,7 @@
 ParticleSimulation::ParticleSimulation() 
   : sim_length_(10.0), timestep_(0.01)
 {
+  
 }
 ParticleSimulation::ParticleSimulation(std::vector<Particle> particles, double sim_length,
                                        double timeStep)
@@ -46,12 +47,30 @@ void ParticleSimulation::setTimeStep(double timeStep)
 
 void ParticleSimulation::runSimulation() {
   double time = 0.0;
+  Integrator integrator(IntegrationMethod::EULER);
   
+  int i = 0;
+  ForceCalculator force_calculator(enabled_forces_);
+  position_history_.push_back({});
+
+  for (const auto& particle : particles_)
+  {
+    position_history_.back().push_back(particle.getPosition());
+  }
+
+
+
   while (time < sim_length_) {
-    ForceCalculator force_calculator(enabled_forces_);
+    
     std::vector<Vector3> forces = force_calculator.calculateForces(particles_);
-    integrator_.advance(particles_, forces, timestep_);
+    integrator.advance(particles_, forces, timestep_);
     time += timestep_;
+
+    position_history_.push_back({});
+    for (const auto& particle : particles_) {
+      position_history_.back().push_back(particle.getPosition());
+    }
+    i++;
   }
 }
 
