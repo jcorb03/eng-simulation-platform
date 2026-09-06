@@ -45,7 +45,14 @@ void ParticleSimulation::setTimeStep(double timeStep)
 }
 
 void ParticleSimulation::runSimulation() {
+  double time = 0.0;
   
+  while (time < sim_length_) {
+    ForceCalculator force_calculator(enabled_forces_);
+    std::vector<Vector3> forces = force_calculator.calculateForces(particles_);
+    integrator_.advance(particles_, forces, timestep_);
+    time += timestep_;
+  }
 }
 
 

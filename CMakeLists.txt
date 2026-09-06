@@ -23,6 +23,7 @@ target_include_directories(simulation
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
+
 # Main executable
 add_executable(simulation-platform
     src/simulation-platform.cpp
@@ -42,16 +43,35 @@ FetchContent_Declare(
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
 
+FetchContent_Declare(
+    matplotplusplus
+    GIT_REPOSITORY https://github.com/alandefreitas/matplotplusplus.git
+    GIT_TAG master
+)
+
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-FetchContent_MakeAvailable(googletest)
+FetchContent_MakeAvailable(
+    googletest
+    matplotplusplus)
+
 set_target_properties(
     gtest
     gtest_main
     PROPERTIES
         CXX_CLANG_TIDY ""
 )
+
+# Matplot executable
+add_executable(plot-test
+    src/plottest.cpp
+)
+target_link_libraries(plot-test
+    PRIVATE
+        matplot
+)
+
 # Tests
 enable_testing()
 add_subdirectory(tests)
